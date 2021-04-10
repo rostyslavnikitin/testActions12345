@@ -35,11 +35,11 @@ jobs:
           cat $envDev
           
 
-      #~ - name: Install dependencies
-        #~ run: cd test_actions && npm install
+      - name: Install dependencies
+        run: cd test_actions && npm install
 
-      #~ # Runs project build
-      #~ - name: Run a one-line script
-        #~ run: cd test_actions && npm run build 
+      # Runs project build
+      - name: Run a one-line script
+        run: cd test_actions && npm run build 
 
 
