@@ -24,12 +24,20 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Setup environment
+      - run: |
+          export envDev=./src/client/.env.staging
+          touch $envDev
+          echo API_KEY=${{ secrets.NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR }} >> $envDev
+          cat $envDev
+          
 
-      - name: Install dependencies
-        run: cd test_actions && npm install
+      #~ - name: Install dependencies
+        #~ run: cd test_actions && npm install
 
-      # Runs project build
-      - name: Run a one-line script
-        run: cd test_actions && npm run build 
+      #~ # Runs project build
+      #~ - name: Run a one-line script
+        #~ run: cd test_actions && npm run build 
 
 
