@@ -31,7 +31,7 @@ jobs:
         run: |
           export envDev=./compass/src/client/.env.staging
           touch $envDev
-          echo API_KEY=${{ secrets.NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR }} >> $envDev
+          echo NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR=${{ secrets.NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR }} >> $envDev
           cat $envDev
           
 
