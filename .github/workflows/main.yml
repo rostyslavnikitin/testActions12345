@@ -39,7 +39,7 @@ jobs:
         run: cd test_actions && npm install
 
       # Runs project build
-      - name: Run a one-line script
+      - name: Build
         run: cd test_actions && npm run build 
 
 
