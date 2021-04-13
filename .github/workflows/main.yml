@@ -29,7 +29,7 @@ jobs:
       
       - name: Setup environment
         run: |
-          export envDev=./compass/src/client/.env.staging
+          export envDev=./project/src/client/.env.staging
           touch $envDev
           echo NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR=${{ secrets.NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR }} >> $envDev
           echo NEXT_PUBLIC_FOO=${{ secrets.NEXT_PUBLIC_FOO }} >> $envDev
