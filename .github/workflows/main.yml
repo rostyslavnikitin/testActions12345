@@ -33,7 +33,7 @@ jobs:
           touch $envDev
           echo NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR=${{ secrets.NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR }} >> $envDev
           echo NEXT_PUBLIC_FOO=${{ secrets.NEXT_PUBLIC_FOO }} >> $envDev
-          echo NEXT_PUBLIC_BAR=${{ secrets.NEXT_PUBLIC_BAR }} >> $envDev
+          echo NEXT_PUBLIC_BAR=${{ secrets.next_public_bar }} >> $envDev
           cat $envDev
           
 
